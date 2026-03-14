@@ -1,5 +1,41 @@
 /* Общие стили */
+body {
+    margin: 0; /* Убираем внешние отступы */
+    font-family: 'Montserrat', sans-serif; /* Шрифт */
+    color: #333; /* Цвет текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    background-color: #fff; /* Белый фон */
+}
 
+.container {
+    width: 90%; /* Ширина контейнера */
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрирование */
+    padding: 0 15px; /* Внутренние отступы */
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Шрифт заголовков */
+    text-align: center; /* Центрирование текста */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+h2 {
+    font-size: 40px; /* Размер шрифта */
+    color: #34495e; /* Цвет заголовка */
+}
+
+h3 {
+    font-size: 24px; /* Размер шрифта */
+    color: #333; /* Цвет подзаголовка */
+}
+
+/* Ссылки */
+a {
+    text-decoration: none; /* Убираем подчёркивание */
+    color: #e74c3c; /* Красный цвет ссылок */
+}
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -15,7 +51,6 @@ body {
     padding: 0 15px;
 }
 
-/* Заголовки */
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
     text-align: center;
@@ -23,58 +58,18 @@ h1, h2, h3 {
 }
 
 h2 {
-    font-size: 2.5em;
-    color: #34495e; /* Темно-серый для основных заголовков */
+    font-size: 40px;
+    color: #34495e;
 }
 
 h3 {
-    font-size: 1.5em;
-    color: #333; /* Темный серый для подзаголовков */
-}
-
-/* Ссылки */
-a {
-    text-decoration: none;
-    color: #e74c3c; /* Яркий красный для акцентов */
-}
-/* Общие стили */
-
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
     color: #333;
-    line-height: 1.6;
-    background-color: #fff;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-/* Заголовки */
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 2.5em;
-    color: #34495e; /* Темно-серый для основных заголовков */
-}
-
-h3 {
-    font-size: 1.5em;
-    color: #333; /* Темный серый для подзаголовков */
-}
-
-/* Ссылки */
 a {
     text-decoration: none;
-    color: #e74c3c; /* Яркий красный для акцентов */
+    color: #e74c3c;
 }
 
 
@@ -85,39 +80,37 @@ a {
 
 /* Фоновые цвета */
 .bg-light {
-    background-color: #f4f4f4; /* Светло-серый фон */
+    background-color: #f4f4f4;
 }
 
 .bg-primary {
-    background-color: #e74c3c; /* Основной красный фон */
+    background-color: #e74c3c;
     color: #fff;
-    
+
 }
 
 
 .bg-primary p {
-    color: #fff; /*цвет текста*/
+    color: #fff;
 }
 
 
 /* Кнопки */
-
-
 .btn-primary {
-    background-color: #e74c3c;
-    color: #fff;
-    border-color: #e74c3c;
-    padding: 12px 25px;
-    border-radius: 5px;
-    margin: 5px;
-    cursor: pointer;
-    border: 2px solid transparent;
+    background-color: #e74c3c; /* Красный фон */
+    color: #fff; /* Белый текст */
+    border-color: #e74c3c; /* Цвет рамки */
+    padding: 12px 25px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругление углов */
+    margin: 5px; /* Внешний отступ */
+    cursor: pointer; /* Курсор-указатель */
+    border: 2px solid transparent; /* Прозрачная рамка */
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: #e74c3c;
-    border-color: #e74c3c;
+    background-color: transparent; /* Прозрачный фон */
+    color: #e74c3c; /* Красный текст */
+    border-color: #e74c3c; /* Красная рамка */
     padding: 12px 25px;
     border-radius: 5px;
     margin: 5px;
@@ -126,10 +119,10 @@ a {
 }
 
 .btn-hero {
-    background-color: #da2424;
-    color: #f7f7f7; 
+    background-color: #da2424; /* Ярко-красный фон */
+    color: #f7f7f7; /* Светлый текст */
     padding: 15px 30px;
-    border-color: #ff0000; 
+    border-color: #ff0000;
     padding: 12px 25px;
     border-radius: 5px;
     margin: 5px;
@@ -140,53 +133,54 @@ a {
 
 /* Header */
 header {
-    background-color: #fff;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background-color: #fff; /* Белый фон шапки */
+    padding: 15px 0; /* Отступы сверху и снизу */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+    position: sticky; /* Фиксированная позиция */
+    top: 0; /* Прилипание к верху */
+    z-index: 1000; /* Поверх остальных элементов */
 }
 
 header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Flexbox раскладка */
+    justify-content: space-between; /* Распределение пространства */
+    align-items: center; /* Центрирование по вертикали */
 }
 
 .logo img {
-    height: 70px; /* Регулируйте размер логотипа */
+    height: 130px; /* Высота логотипа */
+    width: auto; /* Ширина автоматическая */
+    
 }
 
 .container ul {
-    list-style: none;
-    display: flex;
+    list-style: none; /* Убираем маркеры списка */
+    display: flex; /* Flexbox для меню */
 }
 
 .container ul li {
-    margin-left: 25px;
+    margin-left: 25px; /* Отступ между пунктами меню */
 }
 
 .container ul li a {
-    font-weight: bold;
-    color: #333;
-   
+    font-weight: bold; /* Жирный шрифт */
+    color: #333; /* Цвет ссылок меню */
 }
 
 .header-actions {
-    display: flex;
-    align-items: center;
+    display: flex; /* Flexbox для кнопок */
+    align-items: center; /* Центрирование по вертикали */
 }
 
 /* Hero section */
 .hero {
-    background-color: rgb(242, 97, 97);
-    text-align: center;
-    padding: 100px 0;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: rgb(242, 97, 97); /* Розовый фон */
+    text-align: center; /* Центрирование текста */
+    padding: 100px 0; /* Отступы */
+    min-height: 500px; /* Минимальная высота */
+    display: flex; /* Flexbox для центрирования */
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
 }
 
 .hero h1 {
@@ -195,105 +189,143 @@ header .container {
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 19.2px;
     margin-bottom: 30px;
 }
 
 
 /* Services */
 .services h2 {
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Отступ под заголовком */
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    display: grid; /* Grid раскладка */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Адаптивные колонки */
+    gap: 30px; /* Расстояние между элементами */
 }
 
 .service-item {
-    text-align: center;
-    background-color: #fff;
-    padding: 25px
-    border-radius: 8px;
+    text-align: center; /* Центрирование текста */
+    background-color: #fff; /* Белый фон карточки */
+    padding: 25px; /* Внутренние отступы */
+    border-radius: 8px; /* Закругление углов */
 }
 
 .service-item img {
-    border-radius: 5px;
-    margin-bottom: 15px;
-    width: 100%;
-    height: 200px; 
-    object-fit: cover; 
+    border-radius: 5px; /* Закругление изображения */
+    margin-bottom: 15px; /* Отступ снизу */
+    width: 100%; /* Полная ширина */
+    height: 200px; /* Фиксированная высота */
+    object-fit: cover; /* Заполнение без искажений */
 }
 
 .service-item h3 {
-    
-    font-size: 25.6px;
+    font-size: 25.6px; /* Размер заголовка */
 }
 
 .service-item p {
-    font-size: 15.2px;
-    color: #666;
-    margin-bottom: 15px;
+    font-size: 15.2px; /* Размер текста описания */
+    color: #666; /* Серый цвет текста */
+    margin-bottom: 15px; /* Отступ снизу */
 }
 
 .price {
-    font-weight: bold;
-    font-size: 19.2px;
-    color: #e74c3c;
-    margin-top: 10px;
+    font-weight: bold; /* Жирный шрифт цены */
+    font-size: 19.2px; /* Размер цены */
+    color: #e74c3c; /* Красный цвет цены */
+    margin-top: 10px; /* Отступ сверху */
 }
 /* Gallery */
-.gallery h2{
-    margin-bottom: 40px;
+.gallery h2 {
+    margin-bottom: 40px; /* Отступ под заголовком */
 }
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    display: grid; /* Grid раскладка */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивные колонки */
+    gap: 15px; /* Расстояние между элементами */
 }
-.gallery-item{
-    overflow: hidden;
-    border-radius: 10px;
-    cursor: pointer;
+.gallery-item {
+    overflow: hidden; /* Скрываем выходящее содержимое */
+    border-radius: 10px; /* Закругление углов */
+    cursor: pointer; /* Курсор-указатель */
 }
 .gallery-item img {
-    width: 100%;
-    height: 250px; 
-    object-fit: cover;
-    
+    width: 100%; /* Полная ширина */
+    height: 250px; /* Фиксированная высота */
+    object-fit: cover; /* Заполнение без искажений */
 }
+
+
+.masters h2 {
+    margin-bottom: 40px; /* Отступ под заголовком */
+}
+
+
+.masters-grid {
+    display: grid; /* Grid раскладка */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Адаптивные колонки */
+    gap: 30px; /* Расстояние между карточками */
+}
+
+/* Карточка мастера */
+.master-card {
+    text-align: center; /* Центрирование текста */
+    background-color: #fff; /* Белый фон */
+    padding: 25px; /* Внутренние отступы */
+    border-radius: 8px; /* Закругление углов */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Тень */
+}
+
+/* Фото мастера */
+.master-card img {
+    width: 150px; /* Ширина фото */
+    height: 150px; /* Высота фото */
+    border-radius: 50%; /* Круглое фото */
+    object-fit: cover; /* Заполнение без искажений */
+    margin: 0 auto 15px auto; /* Центрирование */
+    border: 3px solid #e74c3c; /* Красная рамка */
+}
+
+.master-card h3 {
+    margin-bottom: 5px; /* Отступ снизу */
+}
+
+.master-card p {
+    font-size: 14.4px; /* Уменьшенный шрифт */
+    color: #666; /* Серый цвет текста */
+}
+/* Адаптивность для мобильных */
 @media (max-width: 600px) {
     .container ul {
-    list-style: none;
-    display: flex;
+        list-style: none;
+        display: flex;
     }
 
     .container ul li {
-    margin-left: 25px;
+        margin-left: 25px; /* Отступ между пунктами */
     }
 
     header .container {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-wrap: wrap; /* Перенос элементов */
+        justify-content: center; /* Центрирование */
     }
 
     .logo img {
-    height: 70px; /* Регулируйте размер логотипа */
+        height: 70px; /* Высота логотипа */
     }
 
     .header-actions {
-    display: flex;
-    align-items: center;
+        display: flex;
+        align-items: center;
     }
 
-
     .hero h1 {
-    font-size: 56px;
-    margin-bottom: 15px;
+        font-size: 56px; /* Размер заголовка */
+        margin-bottom: 15px;
     }
 
     h2 {
-        font-size: 32px;
+        font-size: 32px; /* Размер заголовка на мобильных */
     }
 }
