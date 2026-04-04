@@ -1,0 +1,182 @@
+<!-- 
+    ============================================
+    СТРАНИЦА "О НАС"
+    Студия маникюра "Милка"
+    
+    Описание: Информация о студии, история, 
+    ценности и статистика
+    ============================================
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Мета-теги страницы -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас — Студия маникюра "Милка"</title>
+    
+    <!-- Подключение CSS-стилей -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/about.css">
+    
+    <!-- Подключение шрифтов Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка сайта с навигацией -->
+    <header>
+        <div class="container">
+            <div class="logo logo-left">
+                <img src="img/лого.png" alt="Логотип Студии маникюра">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index.html#services">Услуги</a></li>
+                    <li><a href="index.html#masters">Мастера</a></li>
+                    <li><a href="index.html#gallery">Галерея</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><button class="menu-toggle" id="menuToggle">Меню</button></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="header-actions-menu" id="headerMenu">
+                    <a href="about.html" class="btn-secondary">О нас</a>
+                    <a href="contact.html" class="btn-secondary">Связаться с нами</a>
+                    <a href="appointment.html" class="btn-primary">Записаться</a>
+                    <a href="login.html" class="btn-secondary" id="authLink">Вход</a>
+                    <a href="registration.html" class="btn-register" id="regLink">Регистрация</a>
+                    <a href="#" class="btn-secondary" id="logoutLink" style="display: none;">Выход</a>
+                </div>
+            </div>
+            <div class="logo logo-right">
+                <img src="img/лого.png" alt="Логотип Студии маникюра">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="container">
+                <h1>О студии "Милка"</h1>
+                <p class="hero-subtitle">Место, где рождается красота ваших рук</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Наша история</h2>
+                        <p>Студия маникюра "Милка" была основана в 2015 году с простой миссией — дарить женщинам чувство уверенности и красоты через безупречный уход за ногтями.</p>
+                        <p>За годы работы мы выросли из небольшого кабинета в просторную студию с командой профессионалов, но наши ценности остались неизменными: внимание к деталям, забота о каждом клиенте и стремление к совершенству.</p>
+                        <p>Мы гордимся тем, что за это время стали частью жизни тысяч клиентов, помогая им создавать свой уникальный стиль и поддерживать красоту каждый день.</p>
+                    </div>
+                    <div class="about-image">
+                        <video autoplay muted loop playsinline>
+                            <source src="видео.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <div class="container">
+                <h2>Наши ценности</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">✦</div>
+                        <h3>Качество</h3>
+                        <p>Используем только премиальные материалы и современное оборудование от ведущих мировых производителей.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">♥</div>
+                        <h3>Забота</h3>
+                        <p>Каждый клиент для нас — особенный. Создаём уютную атмосферу и индивидуальный подход.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">★</div>
+                        <h3>Профессионализм</h3>
+                        <p>Наши мастера регулярно проходят обучение и повышают квалификацию.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">☀</div>
+                        <h3>Безопасность</h3>
+                        <p>Строгое соблюдение всех норм стерилизации и дезинфекции инструментов.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">лет опыта</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15 000+</span>
+                        <span class="stat-label">довольных клиентов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">профессиональных мастеров</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">видов услуг</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="container">
+                <h2>Наша команда</h2>
+                <p class="team-intro">В "Милке" работают только сертифицированные специалисты с многолетним опытом. Каждый мастер — настоящий художник, который постоянно совершенствует своё мастерство.</p>
+                <div class="team-cta">
+                    <a href="index.html#masters" class="btn-primary">Познакомиться с мастерами</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Приглашаем вас в нашу студию</h2>
+                <p>Подарите своим рукам красоту и ухоженность вместе с профессионалами "Милка"</p>
+                <div class="cta-buttons">
+                    <a href="appointment.html" class="btn-primary">Записаться онлайн</a>
+                    <a href="contact.html" class="btn-secondary">Связаться с нами</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="section-padding">
+        <div class="container">
+            <h2>Свяжитесь с нами</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                </div>
+                <div class="contact-item">
+                    <a href="mailto:info@elegant-nails.ru">info@elegant-nails.ru</a>
+                </div>
+                <div class="contact-item address">
+                    <p>г. Москва, ул. Красная, д. 10, офис 5</p>
+                </div>
+            </div>
+            <div class="contact-actions">
+                <a href="contact.html" class="btn btn-primary">Написать сообщение</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>

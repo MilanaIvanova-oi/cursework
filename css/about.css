@@ -1,0 +1,357 @@
+/* ============================================
+   СТРАНИЦА "О НАС"
+   Студия маникюра "Милка"
+   
+   Описание: Стили для страницы о студии 
+   (история, ценности, статистика, команда)
+   ============================================ */
+
+/* --- Цветовые переменные --- */
+:root {
+    --bordeaux-primary: #800020;
+    --bordeaux-dark: #5a0016;
+    --bordeaux-light: #a00028;
+    --bordeaux-accent: #c9a961;
+}
+
+/* --- Hero секция --- */
+.about-hero {
+    padding: 80px 0;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(128, 0, 32, 0.1);
+}
+
+.about-hero h1 {
+    font-size: 56px;
+    color: var(--bordeaux-primary);
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 22.4px;
+    color: var(--bordeaux-dark);
+    font-weight: 300;
+    margin: 0;
+}
+
+/* --- Основные секции --- */
+.about-section {
+    padding: 80px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 40px;
+    color: var(--bordeaux-primary);
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    font-size: 17.6px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 0 0 300px;
+}
+
+.about-image video,
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(128, 0, 32, 0.2);
+    object-fit: cover;
+}
+
+/* --- Секция ценностей --- */
+.values-section {
+    padding: 80px 0;
+}
+
+.values-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(128, 0, 32, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(128, 0, 32, 0.25);
+    border-color: var(--bordeaux-primary);
+}
+
+.value-icon {
+    font-size: 56px;
+    color: var(--bordeaux-primary);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.value-card h3 {
+    font-size: 24px;
+    color: var(--bordeaux-dark);
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Секция статистики --- */
+.stats-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--bordeaux-primary) 0%, var(--bordeaux-dark) 100%);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 56px;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 17.6px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+}
+
+/* --- Секция команды --- */
+.team-section {
+    padding: 80px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+.team-section h2 {
+    margin-bottom: 20px;
+}
+
+.team-intro {
+    font-size: 19.2px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.team-cta {
+    margin-top: 30px;
+}
+
+/* --- CTA секция --- */
+.cta-section {
+    padding: 80px 0;
+    background: url("фон.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+}
+
+.cta-section h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 19.2px;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn-primary {
+    background-color: var(--bordeaux-primary);
+    border-color: var(--bordeaux-primary);
+}
+
+.cta-buttons .btn-primary:hover {
+    background-color: var(--bordeaux-dark);
+    border-color: var(--bordeaux-dark);
+}
+
+.cta-buttons .btn-secondary {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+.cta-buttons .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Анимация появления при прокрутке (CSS only) --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.value-card,
+.stat-item {
+    animation: fadeInUp 0.6s ease both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 100%;
+}
+
+/* Задержки для каскадного эффекта в сетках */
+.value-card:nth-child(1),
+.stat-item:nth-child(1) {
+    animation-range: entry 0% entry 60%;
+}
+
+.value-card:nth-child(2),
+.stat-item:nth-child(2) {
+    animation-range: entry 5% entry 65%;
+}
+
+.value-card:nth-child(3),
+.stat-item:nth-child(3) {
+    animation-range: entry 10% entry 70%;
+}
+
+.value-card:nth-child(4),
+.stat-item:nth-child(4) {
+    animation-range: entry 15% entry 75%;
+}
+
+/* --- Адаптивность --- */
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-hero h1 {
+        font-size: 44.8px;
+    }
+
+    .hero-subtitle {
+        font-size: 19.2px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 60px 0;
+    }
+
+    .about-hero h1 {
+        font-size: 35.2px;
+    }
+
+    .hero-subtitle {
+        font-size: 17.6px;
+    }
+
+    .about-section,
+    .values-section,
+    .stats-section,
+    .team-section,
+    .cta-section {
+        padding: 50px 0;
+    }
+
+    .about-text h2,
+    .values-section h2 {
+        font-size: 32px;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 40px;
+    }
+
+    .stat-label {
+        font-size: 15.2px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .btn-primary,
+    .cta-buttons .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero h1 {
+        font-size: 28.8px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}

@@ -1,46 +1,52 @@
 /* ============================================
    СТРАНИЦА РЕГИСТРАЦИИ (registration.html)
    Студия маникюра "Милка"
+   
+   Описание: Стили для формы регистрации 
+   нового пользователя
    ============================================ */
 
+/* --- Цветовые переменные --- */
+:root {
+    --bordeaux-primary: #800020;
+    --bordeaux-dark: #5a0016;
+    --bordeaux-light: #a00028;
+    --bordeaux-accent: #c9a961;
+}
+
 /* --- Контейнер страницы --- */
-/* Отступы и минимальная высота страницы регистрации */
 .registration-page {
     padding: 60px 0;
     min-height: calc(100vh - 100px);
 }
 
 /* --- Обёртка формы --- */
-/* Контейнер формы регистрации с полупрозрачным фоном */
 .registration-form-wrapper {
     background-color: rgba(255, 255, 255, 0.95);
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(139, 115, 85, 0.15);
+    box-shadow: 0 4px 20px rgba(128, 0, 32, 0.15);
     max-width: 450px;
     width: 90%;
     margin: 0 auto;
 }
 
 /* --- Заголовок --- */
-/* Заголовок формы регистрации */
 .registration-form-wrapper h2 {
     text-align: center;
     margin-bottom: 30px;
-    color: #8b7355;
+    color: var(--bordeaux-primary);
 }
 
 /* --- Метки полей --- */
-/* Подписи к полям ввода */
 .registration-form-wrapper label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #6b5344;
+    color: var(--bordeaux-dark);
 }
 
 /* --- Поля ввода --- */
-/* Поля ввода формы (имя, email, телефон, пароль) */
 .registration-form-wrapper input {
     width: 100%;
     padding: 12px;
@@ -52,14 +58,13 @@
 }
 
 /* --- Кнопка --- */
-/* Кнопка регистрации на всю ширину */
 .registration-form-wrapper .btn-primary,
 .registration-form-wrapper .btn-register-submit {
     width: 100%;
     margin: 10px 0 20px 0;
-    background-color: #c9a961;
+    background-color: var(--bordeaux-primary);
     color: #fff;
-    border: 2px solid #c9a961;
+    border: 2px solid var(--bordeaux-primary);
     padding: 12px 25px;
     border-radius: 5px;
     cursor: pointer;
@@ -67,29 +72,26 @@
     display: inline-block;
 }
 
-/* Эффект при наведении на кнопку */
 .registration-form-wrapper .btn-register-submit:hover {
-    background-color: #b89650;
-    border-color: #b89650;
+    background-color: var(--bordeaux-dark);
+    border-color: var(--bordeaux-dark);
 }
 
 /* --- Подвал формы --- */
-/* Ссылки "Уже зарегистрированы" и "Назад" */
 .registration-footer,
 .registration-back {
     text-align: center;
     margin-top: 15px;
-    font-size: 0.9em;
+    font-size: 14.4px;
     color: #666;
 }
 
 .registration-footer a,
 .registration-back a {
-    color: #c9a961;
+    color: var(--bordeaux-primary);
     font-weight: bold;
 }
 
-/* Разделительная линия под формой */
 .registration-back {
     margin-top: 25px;
     padding-top: 20px;

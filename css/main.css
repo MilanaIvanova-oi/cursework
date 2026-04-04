@@ -1,10 +1,20 @@
 /* ============================================
    ГЛАВНАЯ СТРАНИЦА (index.html)
    Студия маникюра "Милка"
+   
+   Описание: Стили для главной страницы 
+   (герой-секция, услуги, галерея, мастера)
    ============================================ */
 
+/* --- Цветовые переменные --- */
+:root {
+    --bordeaux-primary: #800020;
+    --bordeaux-dark: #5a0016;
+    --bordeaux-light: #a00028;
+    --bordeaux-accent: #c9a961;
+}
+
 /* --- Главный экран (Hero) --- */
-/* Баннер с заголовком на главной странице */
 .hero {
     background: url("фон.jpg");
     background-size: cover;
@@ -18,46 +28,99 @@
     justify-content: center;
     border-radius: 15px;
     margin: 20px;
-    box-shadow: 0 10px 40px rgba(139, 115, 85, 0.3);
+    box-shadow: 0 10px 40px rgba(128, 0, 32, 0.3);
 }
 
-/* Заголовок главного экрана */
 .hero h1 {
     font-size: 56px;
     margin-bottom: 15px;
     color: #fff;
 }
 
-/* Подзаголовок главного экрана */
 .hero p {
-    font-size: 1.2em;
+    font-size: 19.2px;
     margin-bottom: 30px;
     color: #fff;
 }
 
 /* --- Услуги --- */
-/* Секция с услугами салона */
-#services {
+.services {
     padding: 60px 0;
 }
 
-/* Сетка карточек услуг */
+/* Слайдер скидок */
+.discount-slider-wrapper {
+    margin-bottom: 40px;
+}
+
+.slider {
+    overflow-x: hidden;
+    border-radius: 15px;
+    background: linear-gradient(135deg, var(--bordeaux-primary) 0%, var(--bordeaux-light) 100%);
+    padding: 40px 0;
+    box-shadow: 0 10px 40px rgba(128, 0, 32, 0.3);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.slider-track {
+    display: flex;
+    align-items: center;
+}
+
+.slide {
+    margin-right: 64px;
+    flex-shrink: 0;
+    text-align: center;
+    color: #fff;
+    padding: 20px 40px;
+}
+
+.slide h3 {
+    font-size: 28px;
+    margin: 15px 0 10px 0;
+    font-weight: 700;
+    color: #fff;
+}
+
+.slide p {
+    font-size: 16px;
+    margin: 0;
+    opacity: 0.95;
+}
+
+.discount-badge {
+    display: inline-block;
+    background-color: #fff;
+    color: var(--bordeaux-primary);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
-/* Отдельная карточка услуги */
 .service-item {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.95);
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Изображение услуги */
+.service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(128, 0, 32, 0.2);
+}
+
 .service-item img {
     border-radius: 5px;
     margin-bottom: 15px;
@@ -66,100 +129,132 @@
     object-fit: cover;
 }
 
-/* Название услуги */
 .service-item h3 {
     font-size: 25.6px;
 }
 
-/* Описание услуги */
 .service-item p {
     font-size: 15.2px;
     color: #666;
     margin-bottom: 15px;
 }
 
-/* Цена услуги */
 .price {
     font-weight: bold;
     font-size: 19.2px;
-    color: #8b7355;
+    color: var(--bordeaux-primary);
     margin-top: 10px;
 }
 
 /* --- Галерея --- */
-/* Секция галереи работ */
+.gallery {
+    padding: 60px 0;
+}
 
-#gallery {
-        padding: 60px 0;
-}        
+.gallery-slider {
+    position: relative;
+    overflow: hidden;
+}
 
-.gallery h2 {
-    margin-bottom: 40px; /* Отступ под заголовком */
+.gallery-slides {
+    display: flex;
+    transition: transform 0.5s ease;
 }
-/* Сетка изображений галереи */
-.gallery-grid {
-    display: grid; /* Grid раскладка */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивные колонки */
-    gap: 15px; /* Расстояние между элементами */
+
+.gallery-slides .gallery-item {
+    min-width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
 }
-/* Отдельный элемент галереи */
-.gallery-item {
-    overflow: hidden; /* Скрываем выходящее содержимое */
-    border-radius: 10px; /* Закругление углов */
-    cursor: pointer; /* Курсор-указатель */
+
+.gallery-slides .gallery-item img,
+.gallery-slides .gallery-item video {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-/* Изображение в галерее */
-.gallery-item img {
-    width: 100%; /* Полная ширина */
-    height: 250px; /* Фиксированная высота */
-    object-fit: cover; /* Заполнение без искажений */
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(128, 0, 32, 0.7);
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-nav:hover {
+    background: rgba(128, 0, 32, 0.9);
+}
+
+.gallery-nav.prev {
+    left: 20px;
+}
+
+.gallery-nav.next {
+    right: 20px;
 }
 
 /* --- Мастера --- */
-/* Секция с мастерами салона */
 #masters {
     padding: 60px 0;
 }
 
-/* Сетка карточек мастеров */
 .masters-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
-/* Карточка мастера */
 .master-card {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.95);
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Фото мастера */
+.master-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(128, 0, 32, 0.2);
+}
+
 .master-card img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto 15px auto;
-    border: 3px solid #c9a961;
+    border: 3px solid var(--bordeaux-primary);
 }
 
-/* Имя мастера */
 .master-card h3 {
     margin-bottom: 5px;
 }
 
-/* Описание/должность мастера */
 .master-card p {
-    font-size: 0.9em;
+    font-size: 14.4px;
     color: #666;
 }
 
 /* --- Адаптивность --- */
-/* Адаптация для планшетов и мобильных (до 768px) */
 @media (max-width: 768px) {
     .hero {
         padding: 60px 15px;
@@ -202,9 +297,30 @@
     .contact-info {
         flex-direction: column;
     }
+    
+    .discount-slider {
+        padding: 30px 0;
+        min-height: 180px;
+    }
+
+    .slide {
+        padding: 15px 30px;
+    }
+
+    .slide h3 {
+        font-size: 22px;
+    }
+
+    .slide p {
+        font-size: 14px;
+    }
+
+    .discount-badge {
+        font-size: 20px;
+        padding: 8px 20px;
+    }
 }
 
-/* Адаптация для маленьких экранов (до 480px) */
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 28px;
@@ -218,5 +334,27 @@
         width: 35px;
         height: 35px;
         font-size: 16px;
+    }
+    
+    .discount-slider {
+        padding: 25px 0;
+        min-height: 160px;
+    }
+
+    .slide {
+        padding: 12px 25px;
+    }
+
+    .slide h3 {
+        font-size: 18px;
+    }
+
+    .slide p {
+        font-size: 13px;
+    }
+
+    .discount-badge {
+        font-size: 18px;
+        padding: 6px 15px;
     }
 }

@@ -1,46 +1,52 @@
 /* ============================================
    СТРАНИЦА ВХОДА (login.html)
    Студия маникюра "Милка"
+   
+   Описание: Стили для формы авторизации 
+   сотрудников
    ============================================ */
 
+/* --- Цветовые переменные --- */
+:root {
+    --bordeaux-primary: #800020;
+    --bordeaux-dark: #5a0016;
+    --bordeaux-light: #a00028;
+    --bordeaux-accent: #c9a961;
+}
+
 /* --- Контейнер страницы --- */
-/* Отступы и минимальная высота страницы входа */
 .login-page {
     padding: 60px 0;
     min-height: calc(100vh - 100px);
 }
 
 /* --- Обёртка формы --- */
-/* Контейнер формы входа с полупрозрачным фоном */
 .login-form-wrapper {
     background-color: rgba(255, 255, 255, 0.95);
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(139, 115, 85, 0.15);
+    box-shadow: 0 4px 20px rgba(128, 0, 32, 0.15);
     max-width: 450px;
     width: 90%;
     margin: 0 auto;
 }
 
 /* --- Заголовок --- */
-/* Заголовок формы входа */
 .login-form-wrapper h2 {
     text-align: center;
     margin-bottom: 30px;
-    color: #8b7355;
+    color: var(--bordeaux-primary);
 }
 
 /* --- Метки полей --- */
-/* Подписи к полям ввода */
 .login-form-wrapper label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #6b5344;
+    color: var(--bordeaux-dark);
 }
 
 /* --- Поля ввода --- */
-/* Поля ввода формы (email, пароль) */
 .login-form-wrapper input {
     width: 100%;
     padding: 12px;
@@ -52,29 +58,26 @@
 }
 
 /* --- Кнопка --- */
-/* Кнопка входа на всю ширину */
 .login-form-wrapper .btn-primary {
     width: 100%;
     margin: 10px 0 20px 0;
 }
 
 /* --- Подвал формы --- */
-/* Ссылки "Забыли пароль" и "Назад" */
 .login-footer,
 .login-back {
     text-align: center;
     margin-top: 15px;
-    font-size: 0.9em;
+    font-size: 14.4px;
     color: #666;
 }
 
 .login-footer a,
 .login-back a {
-    color: #c9a961;
+    color: var(--bordeaux-primary);
     font-weight: bold;
 }
 
-/* Разделительная линия под формой */
 .login-back {
     margin-top: 25px;
     padding-top: 20px;

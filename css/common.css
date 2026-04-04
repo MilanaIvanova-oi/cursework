@@ -1,10 +1,14 @@
 /* ============================================
    ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ
    Студия маникюра "Милка"
+   
+   Описание: Базовые стили, используемые на всех 
+   страницах сайта (шапка, подвал, кнопки, 
+   валидация, адаптивность)
    ============================================ */
 
-/* --- Базовые настройки --- */
-/* Основные стили страницы: шрифт, фон, минимальная высота */
+/* --- Базовые настройки страницы --- */
+/* Сброс отступов, шрифт, фоновое изображение */
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -16,10 +20,20 @@ body {
     min-height: 100vh;
 
 }
+ /* body {
+    background: url("фон2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
 
+:root {
+    --bordeaux-primary: #800020;
+    --bordeaux-dark: #5a0016;
+    --bordeaux-light: #a00028;
+    --bordeaux-accent: #c9a961;
+}
 
-
-/* Контейнер для центрирования контента */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -28,38 +42,33 @@ body {
 }
 
 /* --- Заголовки --- */
-/* Общие стили для всех заголовков */
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Стиль заголовка H2 */
 h2 {
-    font-size: 2.5em;
-    color: #8b7355;
+    font-size: 40px;
+    color: var(--bordeaux-primary);
 }
 
-/* Стиль заголовка H3 */
 h3 {
-    font-size: 1.5em;
-    color: #6b5344;
+    font-size: 24px;
+    color: var(--bordeaux-dark);
 }
 
 /* --- Ссылки --- */
-/* Базовые стили ссылок */
 a {
     text-decoration: none;
     color: #c9a961;
 }
 
 /* --- Кнопки --- */
-/* Основная кнопка: золотисто-бежевый фон */
 .btn-primary {
-    background-color: #c9a961;
+    background-color: var(--bordeaux-primary);
     color: #fff;
-    border: 2px solid #c9a961;
+    border: 2px solid var(--bordeaux-primary);
     padding: 12px 25px;
     border-radius: 5px;
     margin: 5px;
@@ -67,11 +76,10 @@ a {
     display: inline-block;
 }
 
-/* Второстепенная кнопка: прозрачный фон с рамкой */
 .btn-secondary {
     background-color: transparent;
-    color: #c9a961;
-    border: 2px solid #c9a961;
+    color: var(--bordeaux-primary);
+    border: 2px solid var(--bordeaux-primary);
     padding: 12px 25px;
     border-radius: 5px;
     margin: 5px;
@@ -79,11 +87,10 @@ a {
     display: inline-block;
 }
 
-/* Кнопка регистрации: коричневая рамка */
 .btn-register {
     background-color: transparent;
-    color: #8b7355;
-    border: 2px solid #8b7355;
+    color: var(--bordeaux-dark);
+    border: 2px solid var(--bordeaux-dark);
     padding: 12px 25px;
     border-radius: 5px;
     margin: 5px;
@@ -91,9 +98,8 @@ a {
     display: inline-block;
 }
 
-/* Кнопка для главного экрана */
 .btn-hero {
-    background-color: #b89650;
+    background-color: var(--bordeaux-light);
     color: #fff;
     padding: 15px 30px;
     border-radius: 5px;
@@ -103,70 +109,186 @@ a {
 }
 
 /* --- Шапка --- */
-/* Фиксированная шапка сайта */
 header {
     background-color: rgba(255, 255, 255, 0.95);
     padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(139, 115, 85, 0.15);
+    box-shadow: 0 2px 10px rgba(128, 0, 32, 0.15);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* Контейнер шапки с flex-раскладкой */
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Логотип студии */
-.logo img {
-    height: 134px;
-    width: 400px;
-    margin: -5px -137px -7px -124px;
-}
-
-/* Навигационное меню */
-header nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-/* Пункты меню */
-header nav ul li {
-    margin-left: 25px;
-}
-
-/* Ссылки в меню */
-header nav ul li a {
-    font-weight: bold;
-    color: #6b5344;
-}
-
-/* Контейнер для кнопок в шапке */
-.header-actions {
+.logo {
     display: flex;
     align-items: center;
 }
 
+.logo img {
+    height: 93px;
+    width: 304px;
+    margin: -5px -137px -7px -124px;
+    border-radius: 10px;
+}
+
+.logo-right {
+    margin-left: auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin-right: 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+}
+
+header nav ul li {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    margin-left: 10px;
+}
+
+.header-actions {
+    margin-left: 0;
+}
+
+header nav ul li a {
+    font-weight: bold;
+    color: var(--bordeaux-dark);
+}
+
+/* --- Выпадающее меню кнопок --- */
+.header-actions {
+    position: relative;
+}
+
+.menu-toggle {
+    background-color: var(--bordeaux-primary);
+    color: #fff;
+    border: 2px solid var(--bordeaux-primary);
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background-color: var(--bordeaux-dark);
+    border-color: var(--bordeaux-dark);
+}
+
+.menu-toggle::after {
+    content: '▼';
+    font-size: 12.8px;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle.active::after {
+    transform: rotate(180deg);
+}
+
+.header-actions-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 240, 235, 0.95) 100%);
+    box-shadow: 0 8px 25px rgba(128, 0, 32, 0.25);
+    border-radius: 10px;
+    padding: 12px;
+    min-width: 220px;
+    z-index: 1001;
+    margin-top: 8px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(128, 0, 32, 0.2);
+}
+
+.header-actions-menu.active {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-actions-menu a,
+.header-actions-menu .btn-primary,
+.header-actions-menu .btn-secondary,
+.header-actions-menu .btn-register {
+    display: block;
+    padding: 14px 20px;
+    margin: 6px 0;
+    background: linear-gradient(135deg, var(--bordeaux-primary) 0%, var(--bordeaux-dark) 100%);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    line-height: 1.4;
+    box-shadow: 0 2px 8px rgba(128, 0, 32, 0.3);
+}
+
+.header-actions-menu a:hover,
+.header-actions-menu .btn-primary:hover,
+.header-actions-menu .btn-secondary:hover,
+.header-actions-menu .btn-register:hover {
+    background: linear-gradient(135deg, var(--bordeaux-dark) 0%, var(--bordeaux-light) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(128, 0, 32, 0.4);
+}
+
+.header-actions-menu a:active,
+.header-actions-menu .btn-primary:active,
+.header-actions-menu .btn-secondary:active,
+.header-actions-menu .btn-register:active {
+    transform: translateY(0);
+}
+
 /* --- Подвал --- */
-/* Подвал сайта с контактной информацией */
 footer {
     background-color: rgba(255, 255, 255, 0.95);
     padding: 60px 0;
     margin-top: 60px;
 }
 
-/* Заголовок в подвале */
 footer h2 {
     margin-bottom: 40px;
-    color: #8b7355;
+    color: var(--bordeaux-primary);
 }
 
-/* Блок с контактами */
 .contact-info {
     display: flex;
     justify-content: center;
@@ -176,59 +298,49 @@ footer h2 {
     margin-bottom: 30px;
 }
 
-/* Отдельный элемент контакта */
 .contact-item {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* Стили текста контактов */
 .contact-item a,
 .contact-item p {
-    font-size: 1.1em;
+    font-size: 17.6px;
     color: #333;
     margin: 0;
 }
 
-/* Кнопки действий в подвале */
 .contact-actions {
     text-align: center;
 }
 
 /* --- Ошибки валидации (общие) --- */
-/* Стиль полей с ошибкой */
 input.input-error,
 textarea.input-error,
 select.input-error {
-    border-color: #dc3545 !important;
+    border-color: red !important;
     background-color: #fff8f8;
 }
 
-/* Стиль полей с успешной валидацией */
 input.input-valid,
 textarea.input-valid,
 select.input-valid {
-    border-color: #28a745 !important;
+    border-color: green !important;
 }
 
-/* Текст сообщения об ошибке */
 .error-message {
-    color: #dc3545;
-    font-size: 0.85em;
-    margin-top: -10px;
-    margin-bottom: 15px;
-    padding: 0 5px;
+    color: #b33939;
+    font-size: 13.6px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #ffcccc;
+    border-radius: 3px;
     display: none;
 }
 
-/* Показ сообщения об ошибке */
-.error-message.visible {
-    display: block;
-}
-
 /* --- Адаптивность (общая) --- */
-/* Адаптация для планшетов и мобильных (до 768px) */
 @media (max-width: 768px) {
     header {
         padding: 10px 0;
@@ -243,6 +355,10 @@ select.input-valid {
         height: 60px;
         width: auto;
         margin: 0;
+    }
+
+    .logo-right {
+        display: none;
     }
 
     header nav ul {
@@ -266,7 +382,6 @@ select.input-valid {
     }
 }
 
-/* Адаптация для маленьких экранов (до 480px) */
 @media (max-width: 480px) {
     h2 {
         font-size: 24px;

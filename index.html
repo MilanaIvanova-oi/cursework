@@ -1,33 +1,58 @@
+<!-- 
+    ============================================
+    ГЛАВНАЯ СТРАНИЦА
+    Студия маникюра "Милка"
+    
+    Описание: Основная страница сайта с услугами, 
+    галереей работ и информацией о мастерах
+    ============================================
+-->
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
+    <!-- Мета-теги страницы -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Студия маникюра "Милка"</title>
+    
+    <!-- Подключение CSS-стилей -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Подключение шрифтов Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Шапка сайта с навигацией -->
     <header>
         <div class="container">
-            <div class="logo">
-                <img src="img/2026-03-20_21-55-19.png" alt="Логотип Студии маникюра">
+            <div class="logo logo-left">
+                <img src="img/лого.png" alt="Логотип Студии маникюра">
             </div>
             <nav>
                 <ul>
                     <li><a href="#services">Услуги</a></li>
                     <li><a href="#masters">Мастера</a></li>
                     <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><button class="menu-toggle" id="menuToggle">Меню</button></li>
                 </ul>
             </nav>
+            <!-- Кнопки в шапке -->
             <div class="header-actions">
-                <a href="#appointment" class=" btn-primary">Записаться</a>
-                <a href="#login" class="btn-secondary">Вход</a>
-                <a href="registration.html" class="btn-register">Регистрация</a>
+                <div class="header-actions-menu" id="headerMenu">
+                    <a href="about.html" class="btn-secondary">О нас</a>
+                    <a href="contact.html" class="btn-secondary">Связаться с нами</a>
+                    <a href="appointment.html" class="btn-primary">Записаться</a>
+                    <a href="login.html" class="btn-secondary" id="authLink">Вход</a>
+                    <a href="registration.html" class="btn-register" id="regLink">Регистрация</a>
+                    <a href="#" class="btn-secondary" id="logoutLink" style="display: none;">Выход</a>
+                </div>
+            </div>
+            <div class="logo logo-right">
+                <img src="img/лого.png" alt="Логотип Студии маникюра">
             </div>
         </div>
     </header>
@@ -35,97 +60,161 @@
         <div class="hero-content">
             <h1>Преобразите ваши руки</h1>
             <p>Профессиональный маникюр, педикюр и дизайн ногтей от наших экспертов.</p>
-            <a href="#appointment" class="btn-hero">Записаться онлайн</a>
+            <a href="appointment.html" class="btn-hero">Записаться онлайн</a>
         </div>
     </div>
     <div id="services" class="services">
         <div class="container">
-            <h2>Наши Услуги</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <img src="img/классический маникюр.jpg" alt="Классический маникюр">
-                    <h3>Классический маникюр</h3>
-                    <p>Идеальная форма и ухоженная кутикула.</p>
-                    <div class="price">от 1200 руб.</div>
-                </div>
-                <div class="service-item">
-                    <img src="img/покрытие гель-лаком.jpg" alt="Покрытие гель-лаком">
-                    <h3>Покрытие гель-лаком</h3>
-                    <p>Стойкое и блестящее покрытие на долгий срок.</p>
-                    <div class="price">от 1800 руб.</div>
-                </div>
-                <div class="service-item">
-                    <img src="img/дизайн ногтей.jpg" alt="Дизайн ногтей">
-                    <h3>Дизайн ногтей</h3>
-                    <p>Уникальные рисунки и украшения для ваших ногтей.</p>
-                    <div class="price">от 500 руб.</div>
-                </div>
-                <div class="service-item">
-                    <img src="img/педикюр.jpg" alt="Педикюр">
-                    <h3>Педикюр</h3>
-                    <p>Уход за ногами и ногтями стоп.</p>
-                    <div class="price">от 1500 руб.</div>
-                
+            <!-- Слайдер со скидками -->
+            <div class="discount-slider-wrapper">
+                <div class="slider">
+                    <div class="slider-track">
+                        <div class="slide">
+                            <span class="discount-badge">-10%</span>
+                            <h3>На первый визит</h3>
+                            <p>Скидка для новых клиентов</p>
+                        </div>
+                        <div class="slide">
+                            <span class="discount-badge">-15%</span>
+                            <h3>Комплекс "Всё включено"</h3>
+                            <p>Маникюр + педикюр + покрытие</p>
+                        </div>
+                        <div class="slide">
+                            <span class="discount-badge">-20%</span>
+                            <h3>Дневная скидка</h3>
+                            <p>С 10:00 до 14:00 по будням</p>
+                        </div>
+                        <div class="slide">
+                            <span class="discount-badge">-25%</span>
+                            <h3>Приведи подругу</h3>
+                            <p>Скидка вам обеим</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
+            <h2>Наши Услуги</h2>
+            <div class="services-grid">
+                <!-- Услуги будут загружены через JS -->
+            </div>
+            <div class="services-footer">
+            </div>
         </div>
+    </div>
         <div id="gallery" class="gallery">
             <div class="container">
                 <h2>Галерея работ</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="img/работа1.jpg"alt="Работа 1">
+                <div class="gallery-slider">
+                    <div class="slides gallery-slides">
+                        <div class="gallery-item">
+                            <img src="img/работа1.jpg" alt="Работа 1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/работа2.jpg" alt="Работа 2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/работа3.jpg" alt="Работа 3">
+                        </div>
+                        <div class="gallery-item">
+                            <video autoplay muted loop playsinline>
+                                <source src="img/работа9.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/работа4.jpg" alt="Работа 4">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/работа5.jpg" alt="Работа 5">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/работа6.jpg" alt="Работа 6">
+                        </div>
+                        <div class="gallery-item">
+                            <video autoplay muted loop playsinline>
+                                <source src="img/работа10.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/работа7.jpg" alt="Работа 7">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/работа8.jpg" alt="Работа 8">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/работа12.jpg" alt="Работа 12">
+                        </div>
+                        <div class="gallery-item">
+                            <video autoplay muted loop playsinline>
+                                <source src="img/работа11.mp4" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/работа2.jpg"alt="Работа 2">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/работа3.jpg"alt="Работа 3">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/работа4.jpg"alt="Работа 4">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/работа5.jpg"alt="Работа 5">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/работа6.jpg"alt="Работа 6">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/работа7.jpg"alt="Работа 7">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/работа8.jpg"alt="Работа 8">
-                    </div>
-
+                    <button class="prev gallery-nav" aria-label="Предыдущий слайд">&#10094;</button>
+                    <button class="next gallery-nav" aria-label="Следующий слайд">&#10095;</button>
                 </div>
-
             </div>
         </div>
     <div id="masters" class="section-padding">
         <div class="container">
             <h2>Наши Мастера</h2>
             <div class="masters-grid">
-                <div class="master-card">
-                    <img src="img/мастер1.jpg" alt="Мастер Анна">
-                    <h3>Анна</h3>
-                    <p>Стаж 5 лет. Специализация: гель-лак, дизайн.</p>
-                </div>
-                <div class="master-card">
-                    <img src="img/мастер2.jpg" alt="Мастер Елена">
-                    <h3>Елена</h3>
-                    <p>Стаж 7 лет. Специализация: классический маникюр, педикюр.</p>
-                </div>
-
-                <div class="master-card">
-                    <img src="img/мастер3.jpg" alt="Мастер Ольга">
-                    <h3>Ольга</h3>
-                    <p>Стаж 3 года. Специализация: наращивание ногтей, френч.</p>
-                </div>
+                <!-- Мастера будут загружены через JS -->
             </div>
         </div>
     </div>
 
-<script src="js/script.js"></script>
+    <!-- ==================== ЗАКОММЕНТИРОВАННЫЕ СЕКЦИИ ==================== -->
+
+    <!-- Секция записи на услугу (отключена) -->
+    <!-- <div id="appointment" class="section-padding bg-primary">
+        <div class="container">
+            <h2>Записаться на услугу</h2>
+            <p>Выберите удобное время и мастера.</p>
+            <a href="#" class="btn btn-hero btn-light">Перейти к записи</a>
+        </div>
+    </div> -->
+
+    <!-- Подвал с контактами -->
+    <footer id="contact" class="section-padding">
+        <div class="container">
+            <h2>Свяжитесь с нами</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                </div>
+                <div class="contact-item">
+                    <a href="mailto:info@elegant-nails.ru">info@elegant-nails.ru</a>
+                </div>
+                <div class="contact-item address">
+                    <p>г. Москва, ул. Красная, д. 10, офис 5</p>
+                </div>
+            </div>
+            <div class="contact-actions">
+                <a href="contact.html" class="btn btn-primary">Написать сообщение</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно входа для сотрудников (отключено) -->
+    <!-- <div id="login" class="modal">
+        <div class="modal-content">
+            <div class="close-button">×</div>
+            <h2>Вход для сотрудников</h2>
+            <form>
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" class="btn btn-primary">Войти</button>
+            </form>
+        </div>
+    </div> -->
+
+
+    <!-- Подключение JavaScript-файла -->
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+
+    
 </body>
 </html>
