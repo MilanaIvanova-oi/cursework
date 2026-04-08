@@ -357,33 +357,28 @@
     font-size: 0.9em;
 }
 
-/* --- Адаптивность для модальных окон и формы (планшеты и телефоны) --- */
-@media (min-width: 480px) and (max-width: 1024px) {
-    /* Страница */
+/* --- Адаптивность: мобильные телефоны --- */
+@media (max-width: 767px) {
     .appointment-page {
-        padding: 40px 0;
+        padding: 30px 0;
     }
 
-    /* Обёртка формы */
     .appointment-form-wrapper {
-        padding: 30px;
-        max-width: 550px;
+        padding: 25px;
     }
 
     .appointment-form-wrapper h2 {
-        font-size: 2em;
+        font-size: 1.6em;
     }
 
     .appointment-form-wrapper .form-subtitle {
-        font-size: 0.9em;
-        margin-bottom: 25px;
+        font-size: 0.85em;
     }
 
     .appointment-form-wrapper label {
-        font-size: 0.95em;
+        font-size: 0.9em;
     }
 
-    /* Поля ввода */
     .appointment-form-wrapper input[type="text"],
     .appointment-form-wrapper input[type="email"],
     .appointment-form-wrapper input[type="tel"],
@@ -391,40 +386,166 @@
     .appointment-form-wrapper input[type="number"],
     .appointment-form-wrapper select,
     .appointment-form-wrapper textarea {
-        padding: 10px;
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .appointment-form-wrapper .btn-submit {
+        padding: 10px 18px;
         font-size: 0.95em;
     }
 
-    /* Кнопка */
-    .appointment-form-wrapper .btn-submit {
-        padding: 12px 20px;
-        font-size: 1em;
-    }
-
-    /* Строки формы в колонку */
     .form-row {
         flex-direction: column;
         gap: 0;
     }
 
-    /* Временные слоты */
     .time-slots {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 8px;
     }
 
     .time-slot {
-        padding: 8px;
-        font-size: 0.9em;
+        padding: 10px;
+        font-size: 0.95em;
     }
 
-    /* Платёж */
     fieldset.payment-methods {
-        padding: 12px;
+        padding: 10px;
     }
 
     fieldset.payment-methods legend {
+        font-size: 0.9em;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .radio-label {
+        font-size: 0.85em;
+    }
+
+    .checkbox-label {
+        font-size: 0.85em;
+        gap: 8px;
+    }
+
+    .checkbox-label span {
+        line-height: 1.4;
+    }
+
+    .user-info {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .user-info-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .user-info-label,
+    .user-info-value {
+        font-size: 0.85em;
+    }
+
+    .back-link {
+        margin-top: 20px;
+        padding-top: 15px;
+    }
+
+    .back-link a {
         font-size: 0.95em;
+    }
+
+    /* Модальные окна */
+    .modal-box {
+        padding: 30px 20px 20px;
+        max-width: 95%;
+        font-size: 0.9em;
+    }
+
+    .modal-icon {
+        font-size: 2em;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .modal-box strong {
+        font-size: 1em;
+    }
+
+    .modal-close-btn {
+        font-size: 1.3em;
+        top: 8px;
+        right: 12px;
+    }
+}
+
+/* --- Адаптивность: планшеты --- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .appointment-page {
+        padding: 50px 0;
+    }
+
+    .appointment-form-wrapper {
+        padding: 35px;
+        max-width: 550px;
+    }
+
+    .appointment-form-wrapper h2 {
+        font-size: 2.2em;
+    }
+
+    .appointment-form-wrapper .form-subtitle {
+        font-size: 0.95em;
+        margin-bottom: 28px;
+    }
+
+    .appointment-form-wrapper label {
+        font-size: 1em;
+    }
+
+    .appointment-form-wrapper input[type="text"],
+    .appointment-form-wrapper input[type="email"],
+    .appointment-form-wrapper input[type="tel"],
+    .appointment-form-wrapper input[type="date"],
+    .appointment-form-wrapper input[type="number"],
+    .appointment-form-wrapper select,
+    .appointment-form-wrapper textarea {
+        padding: 11px;
+        font-size: 0.95em;
+    }
+
+    .appointment-form-wrapper .btn-submit {
+        padding: 14px 22px;
+        font-size: 1.05em;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .time-slots {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .time-slot {
+        padding: 9px;
+        font-size: 0.95em;
+    }
+
+    fieldset.payment-methods {
+        padding: 14px;
+    }
+
+    fieldset.payment-methods legend {
+        font-size: 1em;
     }
 
     .radio-group {
@@ -433,22 +554,21 @@
     }
 
     .radio-label {
-        font-size: 0.9em;
+        font-size: 0.95em;
     }
 
     .checkbox-label {
-        font-size: 0.9em;
+        font-size: 0.95em;
         gap: 8px;
     }
 
-    /* Информация о пользователе */
     .user-info {
-        padding: 12px;
+        padding: 14px;
     }
 
     .user-info-label,
     .user-info-value {
-        font-size: 0.9em;
+        font-size: 0.95em;
     }
 
     .user-info-row {
@@ -456,14 +576,13 @@
         gap: 5px;
     }
 
-    /* Ссылка назад */
     .back-link {
-        margin-top: 20px;
-        padding-top: 15px;
+        margin-top: 25px;
+        padding-top: 18px;
     }
 
     .back-link a {
-        font-size: 1em;
+        font-size: 1.05em;
     }
 
     /* Модальные окна */

@@ -400,8 +400,116 @@
     animation-range: entry 15% entry 75%;
 }
 
-/* --- Адаптивность: планшеты и телефоны --- */
-@media (min-width: 480px) and (max-width: 1024px) {
+/* --- Адаптивность: мобильные телефоны --- */
+@media (max-width: 767px) {
+    .about-hero {
+        padding: 40px 0;
+    }
+
+    .about-hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-subtitle {
+        font-size: 1em;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-image {
+        flex: 0 0 auto;
+        max-width: 100%;
+    }
+
+    .about-section,
+    .values-section,
+    .stats-section,
+    .team-section,
+    .cta-section {
+        padding: 40px 0;
+    }
+
+    .about-text h2,
+    .values-section h2,
+    .team-section h2,
+    .cta-section h2 {
+        font-size: 1.6em;
+    }
+
+    .about-text p {
+        font-size: 0.95em;
+        line-height: 1.7;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .value-card {
+        padding: 25px 20px;
+    }
+
+    .value-icon {
+        font-size: 2.5em;
+    }
+
+    .value-card h3 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .value-card p {
+        font-size: 0.9em;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 2em;
+    }
+
+    .stat-label {
+        font-size: 0.9em;
+    }
+
+    .team-intro {
+        font-size: 0.95em;
+        line-height: 1.7;
+    }
+
+    .team-cta {
+        margin-top: 25px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .cta-buttons .btn-primary,
+    .cta-buttons .btn-secondary {
+        width: 100%;
+        max-width: 260px;
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .cta-section p {
+        font-size: 0.95em;
+        margin-bottom: 30px;
+    }
+}
+
+/* --- Адаптивность: планшеты --- */
+@media (min-width: 768px) and (max-width: 1023px) {
     .about-content {
         flex-direction: column;
         gap: 40px;
@@ -417,11 +525,11 @@
     }
 
     .about-hero h1 {
-        font-size: 2.2em;
+        font-size: 2.8em;
     }
 
     .hero-subtitle {
-        font-size: 1.1em;
+        font-size: 1.2em;
     }
 
     .about-section,
@@ -429,50 +537,50 @@
     .stats-section,
     .team-section,
     .cta-section {
-        padding: 50px 0;
+        padding: 60px 0;
     }
 
     .about-text h2,
     .values-section h2 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
 
     .about-text p {
-        font-size: 1em;
+        font-size: 1.05em;
     }
 
     .values-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-    }
-
-    .value-card {
-        padding: 30px 20px;
-    }
-
-    .value-icon {
-        font-size: 3em;
-    }
-
-    .value-card h3 {
-        font-size: 1.3em;
-    }
-
-    .stats-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
 
+    .value-card {
+        padding: 35px 25px;
+    }
+
+    .value-icon {
+        font-size: 3.2em;
+    }
+
+    .value-card h3 {
+        font-size: 1.4em;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
     .stat-number {
-        font-size: 2.5em;
+        font-size: 3em;
     }
 
     .stat-label {
-        font-size: 0.95em;
+        font-size: 1em;
     }
 
     .team-intro {
-        font-size: 1.05em;
+        font-size: 1.1em;
     }
 
     .cta-buttons {
@@ -484,14 +592,14 @@
     .cta-buttons .btn-primary,
     .cta-buttons .btn-secondary {
         width: 100%;
-        max-width: 280px;
+        max-width: 300px;
     }
 
     .cta-section h2 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
 
     .cta-section p {
-        font-size: 1.05em;
+        font-size: 1.1em;
     }
 }

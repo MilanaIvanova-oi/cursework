@@ -84,42 +84,41 @@
     border-top: 1px solid #eee;
 }
 
-/* --- Адаптивность: планшеты и телефоны --- */
-@media (min-width: 480px) and (max-width: 1024px) {
+/* --- Адаптивность: мобильные телефоны --- */
+@media (max-width: 767px) {
     .login-page {
-        padding: 40px 0;
+        padding: 30px 0;
     }
 
     .login-form-wrapper {
-        padding: 30px;
-        max-width: 400px;
+        padding: 25px;
     }
 
     .login-form-wrapper h2 {
-        font-size: 2em;
-        margin-bottom: 25px;
+        font-size: 1.6em;
+        margin-bottom: 20px;
     }
 
     .login-form-wrapper label {
-        font-size: 0.95em;
+        font-size: 0.9em;
+        margin-bottom: 6px;
     }
 
     .login-form-wrapper input {
-        padding: 10px;
-        font-size: 0.95em;
-        margin-bottom: 18px;
+        padding: 8px;
+        font-size: 0.9em;
+        margin-bottom: 15px;
     }
 
     .login-form-wrapper .btn-primary {
-        padding: 12px 18px;
-        font-size: 1em;
-        margin: 8px 0 18px 0;
+        padding: 10px 16px;
+        font-size: 0.95em;
+        margin: 6px 0 15px 0;
     }
 
     .login-footer,
     .login-back {
-        font-size: 0.9em;
-        margin-top: 12px;
+        font-size: 0.85em;
     }
 
     .login-back {
@@ -129,7 +128,82 @@
 
     .login-footer a,
     .login-back a {
+        font-size: 0.9em;
+    }
+
+    /* Модальные окна */
+    .modal-box {
+        padding: 30px 20px 20px;
+        max-width: 95%;
+        font-size: 0.9em;
+    }
+
+    .modal-icon {
+        font-size: 2em;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .modal-box strong {
+        font-size: 1em;
+    }
+
+    .modal-close-btn {
+        font-size: 1.3em;
+    }
+
+    #loginUserName {
         font-size: 0.95em;
+    }
+}
+
+/* --- Адаптивность: планшеты --- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .login-page {
+        padding: 50px 0;
+    }
+
+    .login-form-wrapper {
+        padding: 35px;
+        max-width: 420px;
+    }
+
+    .login-form-wrapper h2 {
+        font-size: 2.2em;
+        margin-bottom: 28px;
+    }
+
+    .login-form-wrapper label {
+        font-size: 1em;
+    }
+
+    .login-form-wrapper input {
+        padding: 12px;
+        font-size: 0.95em;
+        margin-bottom: 20px;
+    }
+
+    .login-form-wrapper .btn-primary {
+        padding: 14px 20px;
+        font-size: 1.05em;
+        margin: 10px 0 20px 0;
+    }
+
+    .login-footer,
+    .login-back {
+        font-size: 0.95em;
+        margin-top: 15px;
+    }
+
+    .login-back {
+        margin-top: 25px;
+        padding-top: 18px;
+    }
+
+    .login-footer a,
+    .login-back a {
+        font-size: 1em;
     }
 
     /* Модальные окна */

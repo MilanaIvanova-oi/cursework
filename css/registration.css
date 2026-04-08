@@ -98,47 +98,46 @@
     border-top: 1px solid #eee;
 }
 
-/* --- Адаптивность: планшеты и телефоны --- */
-@media (min-width: 480px) and (max-width: 1024px) {
+/* --- Адаптивность: мобильные телефоны --- */
+@media (max-width: 767px) {
     .registration-page {
-        padding: 40px 0;
+        padding: 30px 0;
     }
 
     .registration-form-wrapper {
-        padding: 30px;
-        max-width: 400px;
+        padding: 25px;
     }
 
     .registration-form-wrapper h2 {
-        font-size: 2em;
-        margin-bottom: 25px;
+        font-size: 1.6em;
+        margin-bottom: 20px;
     }
 
     .registration-form-wrapper label {
-        font-size: 0.95em;
+        font-size: 0.9em;
+        margin-bottom: 6px;
     }
 
     .registration-form-wrapper input {
-        padding: 10px;
-        font-size: 0.95em;
-        margin-bottom: 18px;
+        padding: 8px;
+        font-size: 0.9em;
+        margin-bottom: 15px;
     }
 
     .registration-form-wrapper .btn-primary,
     .registration-form-wrapper .btn-register-submit {
-        padding: 12px 18px;
-        font-size: 1em;
-        margin: 8px 0 18px 0;
+        padding: 10px 16px;
+        font-size: 0.95em;
+        margin: 6px 0 15px 0;
     }
 
     .registration-form-wrapper .btn-register-submit:hover {
-        padding: 12px 18px;
+        padding: 10px 16px;
     }
 
     .registration-footer,
     .registration-back {
-        font-size: 0.9em;
-        margin-top: 12px;
+        font-size: 0.85em;
     }
 
     .registration-back {
@@ -148,7 +147,83 @@
 
     .registration-footer a,
     .registration-back a {
+        font-size: 0.9em;
+    }
+
+    /* Модальные окна */
+    .modal-box {
+        padding: 30px 20px 20px;
+        max-width: 95%;
+        font-size: 0.9em;
+    }
+
+    .modal-icon {
+        font-size: 2em;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .modal-box strong {
+        font-size: 1em;
+    }
+
+    .modal-close-btn {
+        font-size: 1.3em;
+    }
+}
+
+/* --- Адаптивность: планшеты --- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .registration-page {
+        padding: 50px 0;
+    }
+
+    .registration-form-wrapper {
+        padding: 35px;
+        max-width: 420px;
+    }
+
+    .registration-form-wrapper h2 {
+        font-size: 2.2em;
+        margin-bottom: 28px;
+    }
+
+    .registration-form-wrapper label {
+        font-size: 1em;
+    }
+
+    .registration-form-wrapper input {
+        padding: 12px;
         font-size: 0.95em;
+        margin-bottom: 20px;
+    }
+
+    .registration-form-wrapper .btn-primary,
+    .registration-form-wrapper .btn-register-submit {
+        padding: 14px 20px;
+        font-size: 1.05em;
+        margin: 10px 0 20px 0;
+    }
+
+    .registration-form-wrapper .btn-register-submit:hover {
+        padding: 14px 20px;
+    }
+
+    .registration-footer,
+    .registration-back {
+        font-size: 0.95em;
+        margin-top: 15px;
+    }
+
+    .registration-back {
+        margin-top: 25px;
+        padding-top: 18px;
+    }
+
+    .registration-footer a,
+    .registration-back a {
+        font-size: 1em;
     }
 
     /* Модальные окна */
