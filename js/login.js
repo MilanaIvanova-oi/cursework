@@ -46,7 +46,6 @@ async function fetchLogin(username, password) {
             const modal = document.querySelector('#loginErrorModal')
             if (modal) {
                 modal.classList.add('active')
-                modal.querySelector('.error-detail').textContent = result.message || 'Неверный логин или пароль. Попробуйте ещё раз.'
             }
         }
     } catch (error) {
@@ -54,7 +53,6 @@ async function fetchLogin(username, password) {
         const modal = document.querySelector('#loginErrorModal')
         if (modal) {
             modal.classList.add('active')
-            modal.querySelector('.error-detail').textContent = 'Ошибка соединения с сервером'
         }
     }
 }

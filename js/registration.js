@@ -37,7 +37,6 @@ async function fetchData(name, username, email, phone, password) {
             const modal = document.querySelector('#regSuccessModal')
             if (modal) {
                 modal.classList.add('active')
-                modal.querySelector('.modal-detail').textContent = result.message || 'Добро пожаловать в студию маникюра "Милка"!'
             }
 
             setTimeout(() => {
@@ -47,7 +46,6 @@ async function fetchData(name, username, email, phone, password) {
             const modal = document.querySelector('#regErrorModal')
             if (modal) {
                 modal.classList.add('active')
-                modal.querySelector('.error-detail').textContent = result.message
             }
         }
     } catch (error) {
@@ -55,7 +53,6 @@ async function fetchData(name, username, email, phone, password) {
         const modal = document.querySelector('#regErrorModal')
         if (modal) {
             modal.classList.add('active')
-            modal.querySelector('.error-detail').textContent = 'Ошибка соединения с сервером: ' + error.message
         }
     }
 }

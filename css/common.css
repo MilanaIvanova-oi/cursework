@@ -20,12 +20,6 @@ body {
     min-height: 100vh;
 
 }
- /* body {
-    background: url("фон2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-} */
 
 :root {
     --bordeaux-primary: #800020;

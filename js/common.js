@@ -114,6 +114,7 @@ function validateField(fieldId) {
             return true
         }
     }
+    
 
     if (fieldId === 'email' || fieldId === 'reg-email') {
         const emailRegex = /^[a-zA-Z0-9._-]+@(gmail|mail|yandex)\.(ru|com)$/
@@ -131,9 +132,10 @@ function validateField(fieldId) {
     }
 
     if (fieldId === 'phone' || fieldId === 'reg-phone') {
-        const phoneRegex = /^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/
-        if (!phoneRegex.test(value)) {
-            errorDiv.textContent = 'Введите номер в формате +7 (___) ___-__-__'
+        // Принимаем форматы: +7XXXXXXXXXX или 8XXXXXXXXXX (11 цифр)
+        const phoneRegex = /^(\+7|8)\d{10}$/
+        if (!phoneRegex.test(value.replace(/\s/g, ''))) {
+            errorDiv.textContent = 'Введите номер в формате +7XXXXXXXXXX или 8XXXXXXXXXX (11 цифр)'
             errorDiv.style.display = 'block'
             field.classList.add('input-error')
             return false
@@ -192,7 +194,7 @@ function validateField(fieldId) {
 
     if (fieldId === 'message') {
         if (value.length < 10) {
-            errorDiv.textContent = 'Сообщение должно содержать минимум 10 символов'
+            errorDiv.textContent = 'Отзыв должен содержать минимум 10 символов'
             errorDiv.style.display = 'block'
             field.classList.add('input-error')
             return false
@@ -256,6 +258,44 @@ function validateField(fieldId) {
             errorDiv.textContent = ''
             errorDiv.style.display = 'none'
             field.classList.remove('input-error')
+            return true
+        }
+    }
+
+    if (fieldId === 'services-select') {
+        // Валидация выбора услуг через чекбоксы
+        const servicesErrorDiv = document.querySelector('#services-select-error')
+        const checkedServices = document.querySelectorAll('#services-checkboxs-container input[type="checkbox"]:checked')
+        if (checkedServices.length === 0) {
+            if (servicesErrorDiv) {
+                servicesErrorDiv.textContent = 'Выберите хотя бы одну услугу'
+                servicesErrorDiv.style.display = 'block'
+            }
+            return false
+        } else {
+            if (servicesErrorDiv) {
+                servicesErrorDiv.textContent = ''
+                servicesErrorDiv.style.display = 'none'
+            }
+            return true
+        }
+    }
+
+    if (fieldId === 'masters-select') {
+        // Валидация выбора мастеров через чекбоксы
+        const mastersErrorDiv = document.querySelector('#masters-select-error')
+        const checkedMasters = document.querySelectorAll('#masters-checkboxs-container input[type="checkbox"]:checked')
+        if (checkedMasters.length === 0) {
+            if (mastersErrorDiv) {
+                mastersErrorDiv.textContent = 'Выберите хотя бы одного мастера'
+                mastersErrorDiv.style.display = 'block'
+            }
+            return false
+        } else {
+            if (mastersErrorDiv) {
+                mastersErrorDiv.textContent = ''
+                mastersErrorDiv.style.display = 'none'
+            }
             return true
         }
     }

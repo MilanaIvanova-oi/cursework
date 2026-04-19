@@ -757,3 +757,280 @@ fieldset.payment-methods legend {
     /* Отступ сверху */
     margin-top: 4px;
 }
+
+/* ============================================
+   ЧЕКБОКСЫ ДЛЯ ВЫБОРА УСЛУГ И МАСТЕРОВ
+   ============================================ */
+
+/* Контейнер группы чекбоксов */
+.checkbox-group-container {
+    /* Отступ снизу */
+    margin-bottom: 20px;
+    /* Цвет фона */
+    background-color: #f9f9f9;
+    /* Цвет границы */
+    border: 1px solid #ddd;
+    /* Скругление углов */
+    border-radius: 6px;
+    /* Внутренний отступ */
+    padding: 15px;
+    /* Максимальная высота с прокруткой */
+    max-height: 250px;
+    /* Прокрутка при переполнении */
+    overflow-y: auto;
+}
+
+/* Элемент чекбокса */
+.checkbox-item {
+    /* Flex-контейнер */
+    display: flex;
+    /* Выравнивание по началу */
+    align-items: flex-start;
+    /* Расстояние между элементами */
+    gap: 10px;
+    /* Внутренний отступ */
+    padding: 10px;
+    /* Скругление углов */
+    border-radius: 4px;
+    /* Плавный переход */
+    transition: background-color 0.2s;
+    /* Курсор-указатель */
+    cursor: pointer;
+    /* Отступ снизу */
+    margin-bottom: 5px;
+}
+
+.checkbox-item:hover {
+    /* Цвет фона при наведении */
+    background-color: #f0e6ea;
+}
+
+.checkbox-item:last-child {
+    /* Убираем отступ у последнего элемента */
+    margin-bottom: 0;
+}
+
+/* Стили самого чекбокса */
+.checkbox-item input[type="checkbox"] {
+    /* Цвет чекбокса */
+    accent-color: var(--bordeaux-primary);
+    /* Ширина */
+    width: 18px;
+    /* Высота */
+    height: 18px;
+    /* Курсор-указатель */
+    cursor: pointer;
+    /* Убираем отступы */
+    margin: 0;
+    /* Отступ сверху */
+    margin-top: 2px;
+    /* Не сжимается */
+    flex-shrink: 0;
+}
+
+/* Лейбл элемента */
+.checkbox-item-label {
+    /* Растягивается на всё доступное пространство */
+    flex: 1;
+    /* Курсор-указатель */
+    cursor: pointer;
+    /* Размер шрифта */
+    font-size: 0.95em;
+    /* Цвет текста */
+    color: var(--bordeaux-dark);
+    /* Жирный шрифт для названия */
+    font-weight: 500;
+}
+
+/* Дополнительная информация (цена, специализация) */
+.checkbox-item-info {
+    /* Размер шрифта */
+    font-size: 0.85em;
+    /* Цвет текста */
+    color: #666;
+    /* Отступ сверху */
+    margin-top: 3px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 767px) {
+    .checkbox-group-container {
+        padding: 10px;
+        max-height: 200px;
+    }
+
+    .checkbox-item {
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+
+    .checkbox-item-label {
+        font-size: 0.9em;
+    }
+
+    .checkbox-item-info {
+        font-size: 0.8em;
+    }
+}
+
+/* ============================================
+   ВЫБОР МАСТЕРА ДЛЯ КАЖДОЙ УСЛУГИ
+   ============================================ */
+
+/* Блок назначения мастера */
+#service-master-assignment {
+    /* Отступ сверху */
+    margin-top: 20px;
+    /* Цвет фона */
+    background-color: #f9f5f0;
+    /* Цвет границы */
+    border: 1px solid #e0d5c9;
+    /* Скругление углов */
+    border-radius: 6px;
+    /* Внутренний отступ */
+    padding: 20px;
+}
+
+#service-master-assignment > label {
+    /* Цвет текста */
+    color: var(--bordeaux-dark);
+    /* Отступ снизу */
+    margin-bottom: 15px;
+    /* Жирный шрифт */
+    font-weight: bold;
+    /* Размер шрифта */
+    font-size: 1em;
+}
+
+/* Контейнер пар услуга-мастер */
+#service-master-pairs {
+    /* Отступ между элементами */
+    display: flex;
+    /* Направление */
+    flex-direction: column;
+    /* Расстояние между элементами */
+    gap: 15px;
+}
+
+/* Строка услуги с выбором мастера */
+.service-master-pair {
+    /* Цвет фона */
+    background-color: #fff;
+    /* Цвет границы */
+    border: 1px solid #ddd;
+    /* Скругление углов */
+    border-radius: 5px;
+    /* Внутренний отступ */
+    padding: 15px;
+    /* Тень элемента */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Строка внутри пары */
+.service-master-row {
+    /* Flex-контейнер */
+    display: flex;
+    /* Направление */
+    flex-direction: column;
+    /* Расстояние между элементами */
+    gap: 10px;
+}
+
+/* Название услуги */
+.service-name {
+    /* Цвет текста */
+    color: var(--bordeaux-primary);
+    /* Размер шрифта */
+    font-size: 1em;
+    /* Отступ снизу */
+    padding-bottom: 8px;
+    /* Граница снизу */
+    border-bottom: 2px solid var(--bordeaux-accent);
+}
+
+/* Контейнер выбора мастера */
+.master-select {
+    /* Занимает всё пространство */
+    flex: 1;
+}
+
+/* Select для мастера */
+.master-select-for-service {
+    /* Ширина 100% */
+    width: 100%;
+    /* Внутренний отступ */
+    padding: 12px;
+    /* Цвет границы */
+    border: 1px solid #ccc;
+    /* Скругление углов */
+    border-radius: 4px;
+    /* Включает padding в ширину */
+    box-sizing: border-box;
+    /* Шрифт элемента */
+    font-family: 'Montserrat', sans-serif;
+    /* Размер шрифта */
+    font-size: 0.95em;
+    /* Цвет текста */
+    color: var(--bordeaux-dark);
+    /* Цвет фона */
+    background-color: #fff;
+    /* Курсор-указатель */
+    cursor: pointer;
+}
+
+.master-select-for-service:focus {
+    /* Убираем стандартную обводку */
+    outline: none;
+    /* Цвет границы при фокусе */
+    border-color: var(--bordeaux-primary);
+    /* Тень при фокусе */
+    box-shadow: 0 0 5px rgba(128, 0, 32, 0.3);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 767px) {
+    #service-master-assignment {
+        padding: 15px;
+    }
+
+    .service-master-pair {
+        padding: 12px;
+    }
+
+    .service-name {
+        font-size: 0.95em;
+    }
+
+    .master-select-for-service {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 768px) {
+    /* На планшетах и десктопах располагаем в строку */
+    .service-master-row {
+        /* Направление в строку */
+        flex-direction: row;
+        /* Выравнивание по центру */
+        align-items: center;
+    }
+
+    .service-name {
+        /* Фиксированная ширина названия */
+        min-width: 180px;
+        /* Отступ снизу убираем */
+        padding-bottom: 0;
+        /* Границу снизу убираем */
+        border-bottom: none;
+        /* Выравнивание по центру */
+        display: flex;
+        /* Выравнивание */
+        align-items: center;
+    }
+}

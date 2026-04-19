@@ -90,19 +90,21 @@
                         </div>
                     </div>
 
-                    <!-- Выбор услуги (загружается из базы данных через JS) -->
-                    <label for="service-select">Выберите услугу *</label>
-                    <select id="service-select" name="service" required>
-                        <option value="">-- Выберите услугу --</option>
-                    </select>
-                    <div class="error-message" id="service-select-error"></div>
+                    <!-- Выбор услуг с назначением мастера -->
+                    <label>Выберите услуги *</label>
+                    <div class="checkbox-group-container" id="services-checkboxs-container">
+                        <!-- Услуги будут загружены из базы данных -->
+                    </div>
+                    <div class="error-message" id="services-select-error"></div>
 
-                    <!-- Выбор мастера (загружается из базы данных через JS) -->
-                    <label for="master-select">Выберите мастера *</label>
-                    <select id="master-select" name="master" required>
-                        <option value="">-- Выберите мастера --</option>
-                    </select>
-                    <div class="error-message" id="master-select-error"></div>
+                    <!-- Назначение мастера для каждой выбранной услуги -->
+                    <div id="service-master-assignment" style="display:none;">
+                        <label>Выберите мастера для каждой услуги *</label>
+                        <div id="service-master-pairs">
+                            <!-- Будет заполнено автоматически -->
+                        </div>
+                        <div class="error-message" id="service-master-error"></div>
+                    </div>
 
                     <!-- Дата и время записи -->
                     <div class="form-row">

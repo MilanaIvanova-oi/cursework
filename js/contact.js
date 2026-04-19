@@ -62,13 +62,11 @@ async function fetchContact(name, phone, email, message) {
             const modal = document.querySelector('#contactSuccessModal')
             if (modal) {
                 modal.classList.add('active')
-                modal.querySelector('.modal-detail').textContent = result.message 
             }
         } else {
             const modal = document.querySelector('#contactErrorModal')
             if (modal) {
                 modal.classList.add('active')
-                modal.querySelector('.error-detail').textContent = result.message 
             }
         }
     } catch (error) {
@@ -76,7 +74,6 @@ async function fetchContact(name, phone, email, message) {
         const modal = document.querySelector('#contactErrorModal')
         if (modal) {
             modal.classList.add('active')
-            modal.querySelector('.error-detail').textContent = 'Ошибка соединения с сервером'
         }
     }
 }

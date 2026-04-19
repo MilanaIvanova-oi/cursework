@@ -133,13 +133,45 @@ function initGallerySlider() {
 // ============================================
 // ИНИЦИАЛИЗАЦИЯ СЛАЙДЕРА СО СКИДКАМИ
 // ============================================
-function initDiscountSlider() {
-    const slider = document.querySelector('.discount-slider')
-    if (!slider) return
+ // Инициализация слайдера скидок
+        document.addEventListener('DOMContentLoaded', () => {
+            const DEFAULT_SPEED = 2;
+
+            const slider = document.querySelector('.discount-slider-wrapper .slider');
+            if (!slider) return;
+
+            const wrapper = document.querySelector('.discount-slider-wrapper .slider-track');
+
+            wrapper.innerHTML += wrapper.innerHTML;
+
+            let speed = DEFAULT_SPEED;
+            let position = 0;
+
+            slider.addEventListener('mouseenter', () => {
+                speed = DEFAULT_SPEED / 2;
+            });
+
+            slider.addEventListener('mouseleave', () => {
+                speed = DEFAULT_SPEED;
+            });
+
+            function animate() {
+                position -= speed;
+
+                if (Math.abs(position) >= wrapper.scrollWidth / 2) {
+                    position = 0;
+                }
+
+                wrapper.style.transform = `translateX(${position}px)`;
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        })
 
     // CSS анимация делает всю работу - бесконечная плавная прокрутка
     // При наведении курсора анимация приостанавливается через :hover
-}
+
 
 // ============================================
 // ИНИЦИАЛИЗАЦИЯ ГЛАВНОЙ СТРАНИЦЫ
@@ -148,5 +180,5 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchServices()
     fetchMasters()
     initGallerySlider()
-    initDiscountSlider()
+    
 })
